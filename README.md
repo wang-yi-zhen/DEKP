@@ -1,1 +1,1 @@
-Code and data in manuscript will be updated upon publication
+The code and data in the manuscript will be updated upon publication.
