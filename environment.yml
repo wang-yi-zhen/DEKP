@@ -1,4 +1,4 @@
-name: wyzpytorch212
+name: DEKP
 channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
   - nvidia
