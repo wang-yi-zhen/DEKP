@@ -177,4 +177,4 @@ dependencies:
       - wsproto==1.2.0
       - xxhash==3.4.1
       - yarl==1.9.4
-prefix: /home/dell/.conda/envs/wyzpytorch212
+prefix: /home/dell/.conda/envs/DEKP
