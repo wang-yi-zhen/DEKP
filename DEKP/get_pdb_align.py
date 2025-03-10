@@ -29,7 +29,7 @@ def get_pdb_ids_from_uniprot(uniprot_id):
                 return []
         except Exception as e:
             print(f"Request exception: {e}, retry count: {attempt + 1}/{max_retries}")
-            time.sleep(2)  # Wait for 2 seconds before retrying
+            time.sleep(2)
             if attempt == max_retries - 1:
                 return []
 
@@ -51,7 +51,7 @@ def get_pdb_sequences(pdb_id):
                 return []
         except Exception as e:
             print(f"Request exception: {e}, PDB ID: {pdb_id}, retry count: {attempt + 1}/{max_retries}")
-            time.sleep(2)  # Wait for 2 seconds before retrying
+            time.sleep(2)
             if attempt == max_retries - 1:
                 return []
 
@@ -120,7 +120,7 @@ def download_pdb_file(uniprot_id, pdb_id, save_folder):
                 return False
         except Exception as e:
             print(f"Download exception: {e}, PDB ID: {pdb_id}, retry count: {attempt + 1}/{max_retries}")
-            time.sleep(2)  # Wait for 2 seconds before retrying
+            time.sleep(2)
             if attempt == max_retries - 1:
                 return False
 
@@ -134,7 +134,7 @@ def download_alphafold_pdb(uniprot_id, save_folder):
     if os.path.exists(pdb_file_path):
         print(f"AlphaFold PDB file already exists, skipping: {file_name}")
         return True
-    max_retries = 3  # Maximum number of retries
+    max_retries = 3
     for attempt in range(max_retries):
         try:
             response = requests.get(url, timeout=10)
@@ -148,7 +148,7 @@ def download_alphafold_pdb(uniprot_id, save_folder):
                 return False
         except Exception as e:
             print(f"Download AlphaFold PDB file exception: {e}, UniProt ID: {uniprot_id}, retry count: {attempt + 1}/{max_retries}")
-            time.sleep(2)  # Wait for 2 seconds before retrying
+            time.sleep(2)
             if attempt == max_retries - 1:
                 return False
 
@@ -173,7 +173,7 @@ def process_uniprot_ids(json_file, pdb_folder, alphafold_folder):
 
         if uniprot_id in processed_uniprot_ids:
             print(f"UniProt ID {uniprot_id} has been processed, skipping Entry {idx + 1}")
-            continue  # Skip already processed UniProt ID
+            continue
 
         print(f"Entry {idx + 1}: Processing UniProt ID: {uniprot_id}")
 
