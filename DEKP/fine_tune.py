@@ -353,6 +353,6 @@ if __name__=='__main__':
 
     train_X, train_Y, train_identifiers, train_sequences, train_ec_numbers, train_types = prepare_ds(train_loader, best_model, only_ML=True)
     test_X, test_Y, test_identifiers, test_sequences, test_ec_numbers, test_types = prepare_ds(test_loader, best_model, only_ML=True)
-    print(f"Using only UniKP features. {train_X.shape}, {train_Y.shape}, {test_X.shape}, {test_Y.shape}")
+    print(f"Using only chosen features. {train_X.shape}, {train_Y.shape}, {test_X.shape}, {test_Y.shape}")
     ML_list = ['ET']
-    run_ML(ML_list, 'UniKP', train_X, train_Y, test_X, test_Y, test_identifiers, test_sequences, test_ec_numbers, test_types)
+    run_ML(ML_list, 'Chosen', train_X, train_Y, test_X, test_Y, test_identifiers, test_sequences, test_ec_numbers, test_types)
