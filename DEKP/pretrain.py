@@ -495,7 +495,7 @@ def parse_arguments():
     parser.add_argument('--gpu', '-g', type=int, default=0, help='GPU processor ID')  
     parser.add_argument('--seed', '-s', type=int, default=3407, help='random seed for reproducibility')
     parser.add_argument('--fea', '-f', type=str, default='trfm,t5,pst', help='Feature list separated by comma, including molformer,t5,trfm,pst,dssp.')
-    parser.add_argument('--params', '-p', type=str, default='Model/Pretrained_model_199_trfm,t5,pst.pkl', help='Pretrained weights.')
+    parser.add_argument('--params', '-p', type=str, default='Model/Pretrained_model_trfm,t5.pkl', help='Pretrained weights.')
     return parser.parse_args()
 
 if __name__=='__main__':
