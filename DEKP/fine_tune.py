@@ -327,7 +327,7 @@ if __name__=='__main__':
     test_loader = DataLoader(test_ds, batch_size=64, shuffle=False, num_workers=8, collate_fn=graph_collate_fn, drop_last=True)
     device = torch.device(f'cuda:{gpu}' if torch.cuda.is_available() else 'cpu')
     model = MetaDecoder(seq_vocab_size, smi_vocab_size, feature_dim_list=feature_dim_list, hidden=hidden, num_layers=num_layers, protein_len=max_prolen, smi_len=max_smilen, dropout=dropout, kernel_size=kernel_size).to(device)
-    PATH = args.params # f'Model/Pretrained_model_199_trfm,t5,pst.pkl'
+    PATH = args.params # f'Model/Pretrained_model_trfm,t5.pkl'
     model.load_state_dict(torch.load(PATH, map_location=device))
     # print(model)
     criterion = nn.MSELoss(reduction="mean") # nn.HuberLoss()# nn.MSELoss()
