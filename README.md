@@ -21,3 +21,9 @@ conda env create -f environment.yml
 ```
 The files in the **Encode** folder are used to extract different features. You can run the corresponding code file based on your needs, but make sure that the dataset required by the file has been prepared.
 
+## Dataset
+[kcat](https://drive.google.com/file/d/19kjQP5AyNqxfBHwAOxlqjWxcKXaoyr3q/view?usp=sharing)
+[Km](https://drive.google.com/file/d/1e4HC1fjqbwZgyJiFbPt1V9XYi5Cto3z9/view?usp=sharing)
+
+
+
