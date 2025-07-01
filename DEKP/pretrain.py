@@ -35,7 +35,6 @@ def graph_collate_fn(batch):
     fea  = torch.stack([item[3] for item in batch], dim=0)
     y = torch.stack([item[4] for item in batch], dim=0)
     
-    #modify
     identifiers = [item[5] for item in batch]
     sequences = [item[6] for item in batch]
     ec_numbers = [item[7] for item in batch]
